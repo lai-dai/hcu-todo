@@ -231,7 +231,7 @@ export function TodoItem({
         <label
           title={item.name}
           htmlFor={item.id + '-' + index}
-          className="line-clamp-3 text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="line-clamp-3 text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           {item.name}
         </label>
