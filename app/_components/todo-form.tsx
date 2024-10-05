@@ -10,8 +10,7 @@ import { CreateTodoType, TodoType } from '@/lib/types/todo'
 import { createTodo, updateTodo } from '@/lib/actions/todo'
 import { getErrorMessage } from '@/lib/utils/error-message'
 import { todoSchema } from '@/lib/validations/todo'
-
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -20,9 +19,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from './ui/form'
-import { Input } from './ui/input'
-import { Spinner } from './ui/spinner'
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Spinner } from '@/components/ui/spinner'
 
 export function TodoForm({
   defaultValues,
@@ -86,7 +85,7 @@ export function TodoForm({
           )}
         />
 
-        <div className="text-end">
+        <div className="flex flex-col md:items-end">
           <Button type="submit">
             {form.formState.isSubmitting && <Spinner className="mr-3" />}
             {defaultValues ? 'Update todo' : 'Create todo'}
