@@ -23,7 +23,7 @@ export default function Home() {
           <a
             target="_blank"
             referrerPolicy="no-referrer"
-            href="https://github.com/lai-dai/hcu-todo"
+            href="https://github.com/lai-dai/hcu-todo-app"
             className="font-semibold"
           >
             laidai
