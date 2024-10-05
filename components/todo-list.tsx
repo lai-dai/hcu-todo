@@ -9,7 +9,7 @@ import { toast } from 'sonner'
 import { CreateTodoType, TodoType } from '@/lib/types/todo'
 import { deleteTodo, findTodo, updateTodo } from '@/lib/actions/todo'
 import { useSetState } from '@/lib/hooks/use-set-state'
-import { getErrorMessage } from '@/lib/utils/error-message'
+import { cn } from '@/lib/utils'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -231,7 +231,10 @@ export function TodoItem({
         <label
           title={item.name}
           htmlFor={item.id + '-' + index}
-          className="line-clamp-3 text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className={cn(
+            'line-clamp-3 text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+            item.status ? 'line-through' : ''
+          )}
         >
           {item.name}
         </label>
