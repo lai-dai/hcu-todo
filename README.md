@@ -4,6 +4,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+Rename file **.env.example -> .env.local**
+
+Or
+
+```bash
+mv .env.example .env.local
+```
+
+Then
+
+```bash
+npm install
+# ...
+```
+
 ```bash
 npm run dev
 # or

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { Providers } from "./providers";
+import { DeviceDetectProvider } from "@/components/device-detect/server";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,11 +28,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="vi" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen !bg-background font-sans antialiased`}
       >
-        {children}
+        <div vaul-drawer-wrapper="">
+          <DeviceDetectProvider>
+            <Providers>{children}</Providers>
+          </DeviceDetectProvider>
+        </div>
+        <TailwindIndicator />
+        <Toaster />
       </body>
     </html>
   );
