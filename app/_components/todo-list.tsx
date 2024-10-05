@@ -109,7 +109,7 @@ export function TodoListView() {
         </Dialog>
       </div>
 
-      <Command shouldFilter={false} className="w-screen max-w-sm">
+      <Command shouldFilter={false} className="h-96 w-screen max-w-sm">
         <CommandInput
           defaultValue={filters.search}
           onValueChange={debounceSetKey}
