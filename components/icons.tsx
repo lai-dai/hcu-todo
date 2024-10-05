@@ -1,7 +1,7 @@
-import { cva } from "class-variance-authority";
-import { LoaderCircle, type LucideProps } from "lucide-react";
+import { cva } from 'class-variance-authority'
+import { LoaderCircle, type LucideProps } from 'lucide-react'
 
-export type Icon = LucideProps;
+export type Icon = LucideProps
 
 const Menu = (props: Icon) => (
   <svg
@@ -33,28 +33,28 @@ const Menu = (props: Icon) => (
       strokeLinejoin="round"
     ></path>
   </svg>
-);
+)
 
-const Spinner = (props: Icon) => <LoaderCircle {...props} />;
+const Spinner = (props: Icon) => <LoaderCircle {...props} />
 
 const Icons = {
   Menu,
   Spinner,
-};
+}
 
-const iconVariants = cva("", {
+const iconVariants = cva('', {
   variants: {
     size: {
-      xs: "size-3",
-      sm: "size-4",
-      md: "size-6",
-      lg: "size-8",
-      xl: "size-12",
+      xs: 'size-3',
+      sm: 'size-4',
+      md: 'size-6',
+      lg: 'size-8',
+      xl: 'size-12',
     },
   },
   defaultVariants: {
-    size: "md",
+    size: 'md',
   },
-});
+})
 
-export { Icons, iconVariants };
+export { Icons, iconVariants }

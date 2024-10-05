@@ -1,6 +1,7 @@
-import { cn } from '@/lib/utils'
-import { Slot } from '@radix-ui/react-slot'
 import React, { forwardRef, HTMLAttributes } from 'react'
+import { Slot } from '@radix-ui/react-slot'
+
+import { cn } from '@/lib/utils'
 
 export const Center = forwardRef<
   HTMLDivElement,

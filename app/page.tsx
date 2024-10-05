@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { TodoListView } from '@/components/todo-list'
 
 export const metadata = {
-  title: 'Todo App',
+  title: 'HCU Todo App',
 }
 
 export default function Home() {

@@ -1,28 +1,27 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const getErrorMessage = (error?: any, defaultValue = "Error") => {
-  if (!error) return defaultValue;
+export const getErrorMessage = (error?: any, defaultValue = 'Error') => {
+  if (!error) return defaultValue
 
-  let result;
+  let result
 
   switch (typeof error) {
-    case "object":
+    case 'object':
       if (error?.isAxiosError === true) {
         result =
           error?.response?.data?.error?.message ||
           error?.response?.data?.data?.message ||
           error?.response?.data?.message ||
-          error?.message;
+          error?.message
       } else {
-        result =
-          error?.error?.message || error?.data?.message || error?.message;
+        result = error?.error?.message || error?.data?.message || error?.message
       }
-      break;
+      break
 
-    case "number":
-    case "string":
-      result = error;
-      break;
+    case 'number':
+    case 'string':
+      result = error
+      break
   }
 
-  return result || defaultValue;
-};
+  return result || defaultValue
+}
