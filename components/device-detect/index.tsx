@@ -10,7 +10,6 @@ export const [_Provider, useDevice] = createContext<IDevice>()
 export let isMobile: boolean
 export let isTablet: boolean
 export let isDesktop: boolean
-export let isWearable: boolean
 
 export function ClientDeviceDetectProvider({
   children,
@@ -22,6 +21,7 @@ export function ClientDeviceDetectProvider({
   isMobile = device.type === 'mobile'
   isTablet = device.type === 'tablet'
   isDesktop = device.type === undefined
+
   return <_Provider value={device}>{children}</_Provider>
 }
 
@@ -41,13 +41,6 @@ export function TabletView({ children }: { children?: ReactNode }) {
 
 export function DesktopView({ children }: { children?: ReactNode }) {
   if (isDesktop) {
-    return <>{children}</>
-  }
-  return null
-}
-
-export function WearableView({ children }: { children?: ReactNode }) {
-  if (isWearable) {
     return <>{children}</>
   }
   return null

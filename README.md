@@ -38,6 +38,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 ## Features you implemented
 
 UI: Add new responsive-dialog (components\ui\responsive-dialog.tsx)
+Util: Device-detect server side (components\device-detect)
 
 ## Learn More
 
